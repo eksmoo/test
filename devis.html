@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demande de devis — Imprimerie Tenaillon</title>
+<meta name="description" content="Demandez votre devis d'impression en 2 minutes : type de produit, quantité, format, délai souhaité et upload de votre fichier PDF ou AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <a href="index.html" class="logo">Imprimerie <span>Tenaillon</span></a>
+  <nav class="nav-principale" id="nav-principale">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="devis.html" class="bouton-cta">Devis en 2 min</a>
+  <button class="bouton-menu" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="trame-cmjn" aria-hidden="true"></div>
+    <div class="conteneur">
+      <span class="fil-ariane"><a href="index.html">Accueil</a> / Devis</span>
+      <span class="fiche">Demande de devis</span>
+      <h1>Demandez votre devis en 2 minutes</h1>
+      <p>Décrivez votre projet ci-dessous, joignez votre fichier si vous l'avez déjà, et un interlocuteur revient vers vous avec une proposition adaptée à votre budget et à votre délai.</p>
+    </div>
+  </section>
+
+  <section aria-label="Formulaire de devis">
+    <div class="conteneur">
+      <form class="formulaire" data-formulaire>
+        <div class="ligne-champs">
+          <div class="champ">
+            <label for="type-produit">Type de produit</label>
+            <select id="type-produit" name="type-produit" required>
+              <option value="">Sélectionnez un produit</option>
+              <option>Cartes de visite</option>
+              <option>Flyers / dépliants</option>
+              <option>Affiches</option>
+              <option>Catalogues / brochures</option>
+              <option>Packaging / étiquettes</option>
+              <option>Objets publicitaires / textile</option>
+              <option>Enveloppes personnalisées</option>
+              <option>Tampons</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="champ">
+            <label for="quantite">Quantité souhaitée</label>
+            <input type="number" id="quantite" name="quantite" min="1" placeholder="Ex. 500" required>
+          </div>
+        </div>
+
+        <div class="ligne-champs">
+          <div class="champ">
+            <label for="format">Format</label>
+            <input type="text" id="format" name="format" placeholder="Ex. A5, 85x55 mm, sur-mesure...">
+          </div>
+          <div class="champ">
+            <label for="delai">Délai souhaité</label>
+            <select id="delai" name="delai">
+              <option>Standard (pas d'urgence)</option>
+              <option>Sous 1 semaine</option>
+              <option>Sous 48h — urgent</option>
+              <option>Date précise à discuter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="champ">
+          <label>Fichier prêt à imprimer ?</label>
+          <div class="groupe-radio">
+            <label><input type="radio" name="fichier-pret" value="oui" checked> Oui, je le joins</label>
+            <label><input type="radio" name="fichier-pret" value="non"> Non, j'ai besoin d'aide</label>
+          </div>
+        </div>
+
+        <div class="champ">
+          <label for="fichier">Votre fichier (PDF ou AI)</label>
+          <label class="champ-fichier" for="fichier">
+            Cliquez ou déposez votre fichier ici
+            <input type="file" id="fichier" name="fichier" accept=".pdf,.ai">
+            <span class="nom-fichier"></span>
+          </label>
+        </div>
+
+        <div class="champ">
+          <label for="details">Précisions sur votre projet</label>
+          <textarea id="details" name="details" placeholder="Grammage souhaité, finition, couleurs, contexte du projet..."></textarea>
+        </div>
+
+        <div class="ligne-champs">
+          <div class="champ">
+            <label for="nom">Nom &amp; prénom</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="champ">
+            <label for="entreprise">Entreprise (facultatif)</label>
+            <input type="text" id="entreprise" name="entreprise">
+          </div>
+        </div>
+
+        <div class="ligne-champs">
+          <div class="champ">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="champ">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone">
+          </div>
+        </div>
+
+        <button type="submit" class="bouton-cta">Envoyer ma demande de devis</button>
+
+        <p class="confirmation-envoi" hidden style="margin-top:1.4rem; color: var(--or);">
+          Merci, votre demande a bien été enregistrée. Un interlocuteur vous recontacte rapidement au numéro ou à l'adresse indiquée.
+        </p>
+      </form>
+
+      <div class="rassurance-devis" data-reveal>
+        <div><strong>Réponse rapide</strong>Retour sous 24h ouvrées en moyenne.</div>
+        <div><strong>Sans engagement</strong>Le devis ne vous engage à rien.</div>
+        <div><strong>Fichiers acceptés</strong>PDF et AI, avec vérification avant impression.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div>
+        <h4>Imprimerie Tenaillon</h4>
+        <p style="color:var(--gris-texte);">Impression et façonnage à Hardricourt, dans les Yvelines, pour les commerces, entreprises et particuliers.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Prestations</h4>
+        <ul>
+          <li><a href="services.html">Cartes de visite</a></li>
+          <li><a href="services.html">Flyers &amp; affiches</a></li>
+          <li><a href="services.html">Catalogues</a></li>
+          <li><a href="services.html">Objets publicitaires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>1 rue du Vexin — ZA la Brosserie<br>78250 Hardricourt</li>
+          <li><a href="tel:0134748842">01 34 74 88 42</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>© 2026 Imprimerie Tenaillon. Tous droits réservés.</span>
+      <span>1 rue du Vexin, ZA la Brosserie, 78250 Hardricourt</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

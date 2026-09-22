@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Imprimerie Tenaillon</title>
+<meta name="description" content="Contactez l'Imprimerie Tenaillon à Hardricourt (Yvelines) : adresse, téléphone, horaires et formulaire de contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Playfair+Display:ital@0;1&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <a href="index.html" class="logo">Imprimerie <span>Tenaillon</span></a>
+  <nav class="nav-principale" id="nav-principale">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="actif">Contact</a>
+  </nav>
+  <a href="devis.html" class="bouton-cta">Devis en 2 min</a>
+  <button class="bouton-menu" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="trame-cmjn" aria-hidden="true"></div>
+    <div class="conteneur">
+      <span class="fil-ariane"><a href="index.html">Accueil</a> / Contact</span>
+      <span class="fiche">Nous contacter</span>
+      <h1>Un interlocuteur direct, pas un standard</h1>
+      <p>Pour un conseil rapide ou une question sur un projet en cours, appelez-nous directement ou passez par le formulaire ci-dessous.</p>
+    </div>
+  </section>
+
+  <section aria-label="Coordonnées et formulaire">
+    <div class="conteneur contact-grille contact-grille-large">
+      <div class="infos-contact infos-contact-grandes" data-reveal>
+
+        <button type="button" class="info-copiable" data-copy="1 rue du Vexin, ZA la Brosserie, 78250 Hardricourt">
+          <span class="info-label">Adresse</span>
+          <span class="info-valeur">1 rue du Vexin — ZA la Brosserie<br>78250 Hardricourt</span>
+          <span class="info-action">Copier <span class="info-icone">⧉</span></span>
+        </button>
+
+        <button type="button" class="info-copiable" data-copy="01 34 74 88 42">
+          <span class="info-label">Téléphone</span>
+          <span class="info-valeur">01 34 74 88 42</span>
+          <span class="info-action">Copier <span class="info-icone">⧉</span></span>
+        </button>
+
+        <button type="button" class="info-copiable" data-copy="tenaillon.pierre@orange.fr">
+          <span class="info-label">E-mail</span>
+          <span class="info-valeur">tenaillon.pierre@orange.fr</span>
+          <span class="info-action">Copier <span class="info-icone">⧉</span></span>
+        </button>
+
+        <p class="info-copie-confirmation" hidden>Copié dans le presse-papiers ✓</p>
+
+        <h3 style="margin-top:2.6rem; font-size:1.4rem;">Horaires d'ouverture</h3>
+        <table class="horaires horaires-grandes">
+          <tr><td>Lundi – Vendredi</td><td>8h30 – 12h30 / 14h00 – 18h00</td></tr>
+          <tr><td>Samedi</td><td>Sur rendez-vous</td></tr>
+          <tr><td>Dimanche</td><td>Fermé</td></tr>
+        </table>
+
+        <div class="carte-placeholder" style="margin-top:2.2rem; min-height:220px;">
+          <span>Carte à intégrer — 1 rue du Vexin, ZA la Brosserie, 78250 Hardricourt</span>
+        </div>
+      </div>
+
+      <form class="formulaire formulaire-grande" data-formulaire data-reveal style="max-width:none;" autocomplete="on">
+        <!-- Piège anti-robot : champ invisible pour les humains, rempli uniquement par les bots -->
+        <div class="champ-piege" aria-hidden="true">
+          <label for="c-site-web">Site web</label>
+          <input type="text" id="c-site-web" name="site-web" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="horodatage-affichage" class="horodatage-affichage">
+
+        <div class="champ champ-grand">
+          <label for="c-nom">Nom &amp; prénom</label>
+          <input type="text" id="c-nom" name="nom" maxlength="80" required>
+        </div>
+        <div class="champ champ-grand">
+          <label for="c-email">E-mail</label>
+          <input type="email" id="c-email" name="email" maxlength="120" required>
+        </div>
+        <div class="champ">
+          <label for="c-sujet">Sujet</label>
+          <select id="c-sujet" name="sujet">
+            <option>Question sur un devis</option>
+            <option>Suivi de commande</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="champ champ-grand">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" maxlength="2000" required></textarea>
+        </div>
+        <button type="submit" class="bouton-cta">Envoyer le message</button>
+        <p class="confirmation-envoi" hidden style="margin-top:1.4rem; color: var(--or);">
+          Merci, votre message a bien été envoyé. Nous vous répondons rapidement.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div>
+        <h4>Imprimerie Tenaillon</h4>
+        <p style="color:var(--gris-texte);">Impression et façonnage à Hardricourt, dans les Yvelines, pour les commerces, entreprises et particuliers.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Prestations</h4>
+        <ul>
+          <li><a href="services.html">Cartes de visite</a></li>
+          <li><a href="services.html">Flyers &amp; affiches</a></li>
+          <li><a href="services.html">Catalogues</a></li>
+          <li><a href="services.html">Objets publicitaires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>1 rue du Vexin — ZA la Brosserie<br>78250 Hardricourt</li>
+          <li><a href="tel:0134748842">01 34 74 88 42</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>© 2026 Imprimerie Tenaillon. Tous droits réservés.</span>
+      <span>1 rue du Vexin, ZA la Brosserie, 78250 Hardricourt</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
